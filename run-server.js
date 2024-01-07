@@ -9,6 +9,7 @@ const port = 3000;
 
 // run a basic server
 const server = http.createServer((req, res) => {
+  const { method, url } = req;
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hello, World!\n');
